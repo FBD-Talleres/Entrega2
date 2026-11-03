@@ -33,23 +33,23 @@ prompt APPLICATION 53439 - Wheels Alpes
 -- Application Export:
 --   Application:     53439
 --   Name:            Wheels Alpes
---   Date and Time:   04:47 Tuesday November 3, 2026
---   Exported By:     IVAN
+--   Date and Time:   04:55 Tuesday November 3, 2026
+--   Exported By:     S.MORAN@UNIANDES.EDU.CO
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                     20
---       Items:                   57
+--     Pages:                     22
+--       Items:                   64
 --       Validations:              4
---       Processes:               20
---       Regions:                 39
---       Buttons:                 21
+--       Processes:               24
+--       Regions:                 43
+--       Buttons:                 25
 --     Shared Components:
 --       Logic:
 --         Build Options:          1
 --       Navigation:
 --         Lists:                  2
 --         Breadcrumbs:            1
---           Entries:             17
+--           Entries:             19
 --       Security:
 --         Authentication:         2
 --         Authorization:          3
@@ -91,7 +91,7 @@ wwv_imp_workspace.create_flow(
 ,p_timestamp_tz_format=>'DS'
 ,p_flow_image_prefix=>nvl(wwv_flow_application_install.get_image_prefix,'')
 ,p_authentication_id=>wwv_flow_imp.id(10449359879671227735)
-,p_application_tab_set=>0
+,p_application_tab_set=>1
 ,p_logo_type=>'T'
 ,p_logo_text=>'Wheels Alpes'
 ,p_proxy_server=>nvl(wwv_flow_application_install.get_proxy,'')
@@ -106,12 +106,12 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Wheels Alpes'
 ,p_created_on=>wwv_flow_imp.dz('20261102061241Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20261103044633Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261103045439Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
-,p_last_updated_by=>'SARA'
+,p_last_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_file_prefix=>nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>2461347061241
-,p_version_scn=>'15852768299270'
+,p_version_scn=>'15852769976597'
 ,p_print_server_type=>'INSTANCE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
@@ -375,9 +375,9 @@ wwv_flow_imp_shared.create_list(
  p_id=>wwv_flow_imp.id(10096211308190611925)
 ,p_name=>'Navigation Menu'
 ,p_static_id=>'navigation-menu'
-,p_version_scn=>'SH256:n5p7mOC6gLe5Rcso__tCGWcdafGrl-kCQT-TvdZb_Y0'
+,p_version_scn=>'SH256:aIxmAkZpyRJl7HiNp4Wq8N8FN9Th1CW_qu3yvZ4w2v0'
 ,p_created_on=>wwv_flow_imp.dz('20261102061241Z')
-,p_updated_on=>wwv_flow_imp.dz('20261103044630Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045305Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
@@ -424,15 +424,44 @@ wwv_flow_imp_shared.create_list_item(
 ,p_updated_by=>'SARA'
 );
 wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(10487190564445374157)
+,p_list_item_display_sequence=>220
+,p_list_item_link_text=>'Cancelar solicitud'
+,p_static_id=>'cancelar-solicitud-2'
+,p_list_item_link_target=>'f?p=&APP_ID.:34:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-table-pointer'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'34'
+,p_created_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_shared.create_list_item(
  p_id=>wwv_flow_imp.id(10097955114119653931)
 ,p_list_item_display_sequence=>20
 ,p_list_item_link_text=>'Conductor'
 ,p_static_id=>'conductor'
 ,p_list_item_link_target=>'f?p=&APP_ID.:21:&SESSION.::&DEBUG.::::'
 ,p_list_item_icon=>'fa-car'
+,p_security_scheme=>wwv_flow_imp.id(10470092785493360891)
 ,p_list_item_current_type=>'TARGET_PAGE'
 ,p_created_on=>wwv_flow_imp.dz('20261102061941Z')
-,p_updated_on=>wwv_flow_imp.dz('20261103041830Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045305Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(10487046280787369034)
+,p_list_item_display_sequence=>210
+,p_list_item_link_text=>'Editar cuenta pasajero'
+,p_static_id=>'editar-cuenta-pasajero'
+,p_list_item_link_target=>'f?p=&APP_ID.:33:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-forms'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'33'
+,p_created_on=>wwv_flow_imp.dz('20261103044925Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044925Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
@@ -1397,7 +1426,7 @@ wwv_flow_imp_shared.create_menu(
 ,p_name=>'Breadcrumb'
 ,p_static_id=>'breadcrumb'
 ,p_created_on=>wwv_flow_imp.dz('20261102061241Z')
-,p_updated_on=>wwv_flow_imp.dz('20261103044630Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045017Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
@@ -1433,6 +1462,28 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_updated_on=>wwv_flow_imp.dz('20261103044309Z')
 ,p_created_by=>'SARA'
 ,p_updated_by=>'SARA'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(10487192875555374233)
+,p_short_name=>'Cancelar solicitud'
+,p_static_id=>'cancelar-solicitud-2'
+,p_link=>'f?p=&APP_ID.:34:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>34
+,p_created_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_shared.create_menu_option(
+ p_id=>wwv_flow_imp.id(10487047695082369076)
+,p_short_name=>'Editar cuenta pasajero'
+,p_static_id=>'editar-cuenta-pasajero'
+,p_link=>'f?p=&APP_ID.:33:&APP_SESSION.::&DEBUG.:::'
+,p_page_id=>33
+,p_created_on=>wwv_flow_imp.dz('20261103044926Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044926Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(10482658544181304735)
@@ -2523,10 +2574,11 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_step_template=>4075783602716660119
 ,p_page_template_options=>'#DEFAULT#'
+,p_required_role=>wwv_flow_imp.id(10470092785493360891)
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
 ,p_created_on=>wwv_flow_imp.dz('20261103035528Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20261103035713Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261103045439Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_last_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
@@ -3704,6 +3756,647 @@ wwv_flow_imp_page.create_page_process(
 ,p_internal_uid=>10484711426583351826
 ,p_created_on=>wwv_flow_imp.dz('20261103044633Z')
 ,p_updated_on=>wwv_flow_imp.dz('20261103044633Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+end;
+/
+prompt --application/pages/page_00033
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>33
+,p_name=>'Editar cuenta pasajero'
+,p_alias=>'EDITAR-CUENTA-PASAJERO'
+,p_step_title=>'Editar cuenta pasajero'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4075783602716660119
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'02'
+,p_created_on=>wwv_flow_imp.dz('20261103044925Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_last_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(10487046645246369041)
+,p_plug_name=>'Breadcrumb'
+,p_static_id=>'breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2534890969069732905
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_menu_id=>wwv_flow_imp.id(10096210831807611924)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4075790987805660140
+,p_created_on=>wwv_flow_imp.dz('20261103044926Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044926Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(10487050447165369238)
+,p_plug_name=>'Editar cuenta pasajero'
+,p_static_id=>'editar-cuenta-pasajero'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>4075786578761660127
+,p_plug_display_sequence=>10
+,p_plug_item_display_point=>'ABOVE'
+,p_query_type=>'TABLE'
+,p_query_table=>'USUARIO'
+,p_include_rowid_column=>false
+,p_is_editable=>true
+,p_edit_operations=>'i:u:d'
+,p_lost_update_check_type=>'VALUES'
+,p_plug_source_type=>'NATIVE_FORM'
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(10487057049768369246)
+,p_button_sequence=>10
+,p_button_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_button_name=>'CANCEL'
+,p_static_id=>'cancel'
+,p_show_as_disabled=>false
+,p_button_action=>'REDIRECT_PAGE'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4075790603270660137
+,p_button_image_alt=>'Cancel'
+,p_button_position=>'CLOSE'
+,p_button_redirect_url=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::'
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(10487058338120369248)
+,p_button_sequence=>40
+,p_button_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_button_name=>'CREATE'
+,p_static_id=>'create'
+,p_show_as_disabled=>false
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4075790603270660137
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Create'
+,p_button_position=>'CREATE'
+,p_button_condition=>'P33_DOCUMENTO_ID'
+,p_button_condition_type=>'ITEM_IS_NULL'
+,p_database_action=>'INSERT'
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(10487057588111369247)
+,p_button_sequence=>20
+,p_button_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_button_name=>'DELETE'
+,p_static_id=>'delete'
+,p_show_as_disabled=>false
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4075790603270660137
+,p_button_image_alt=>'Delete'
+,p_button_position=>'DELETE'
+,p_button_execute_validations=>'N'
+,p_confirm_message=>'&APP_TEXT$DELETE_MSG!RAW.'
+,p_confirm_style=>'danger'
+,p_button_condition=>'P33_DOCUMENTO_ID'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+,p_database_action=>'DELETE'
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_button(
+ p_id=>wwv_flow_imp.id(10487057911395369248)
+,p_button_sequence=>30
+,p_button_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_button_name=>'SAVE'
+,p_static_id=>'save'
+,p_show_as_disabled=>false
+,p_button_action=>'SUBMIT'
+,p_button_template_options=>'#DEFAULT#'
+,p_button_template_id=>4075790603270660137
+,p_button_is_hot=>'Y'
+,p_button_image_alt=>'Apply Changes'
+,p_button_position=>'CHANGE'
+,p_button_condition=>'P33_DOCUMENTO_ID'
+,p_button_condition_type=>'ITEM_IS_NOT_NULL'
+,p_database_action=>'UPDATE'
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_branch(
+ p_id=>wwv_flow_imp.id(10487058766967369248)
+,p_branch_action=>'f?p=&APP_ID.:1:&APP_SESSION.::&DEBUG.:::&success_msg=#SUCCESS_MSG#'
+,p_branch_point=>'AFTER_PROCESSING'
+,p_branch_type=>'REDIRECT_URL'
+,p_branch_sequence=>1
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487051504022369240)
+,p_name=>'P33_APELLIDO'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>30
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Apellido'
+,p_source=>'APELLIDO'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487052700311369242)
+,p_name=>'P33_CORREO'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>60
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Correo'
+,p_source=>'CORREO'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487050770053369238)
+,p_name=>'P33_DOCUMENTO_ID'
+,p_source_data_type=>'NUMBER'
+,p_is_primary_key=>true
+,p_item_sequence=>10
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_source=>'DOCUMENTO_ID'
+,p_display_as=>'NATIVE_HIDDEN'
+,p_is_persistent=>'N'
+,p_protection_level=>'S'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487051129469369239)
+,p_name=>'P33_NOMBRE'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>20
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Nombre'
+,p_source=>'NOMBRE'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487053191119369243)
+,p_name=>'P33_NUMERO_CELULAR'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>70
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Numero Celular'
+,p_source=>'NUMERO_CELULAR'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487052365810369242)
+,p_name=>'P33_PROGRAMA'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>50
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Programa'
+,p_source=>'PROGRAMA'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_item(
+ p_id=>wwv_flow_imp.id(10487051981532369241)
+,p_name=>'P33_UNIVERSIDAD'
+,p_source_data_type=>'VARCHAR2'
+,p_is_required=>true
+,p_item_sequence=>40
+,p_item_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_item_source_plug_id=>wwv_flow_imp.id(10487050447165369238)
+,p_prompt=>'Universidad'
+,p_source=>'UNIVERSIDAD'
+,p_display_as=>'NATIVE_TEXT_FIELD'
+,p_cSize=>32
+,p_cMaxlength=>255
+,p_label_alignment=>'RIGHT'
+,p_field_template=>1612549789555753698
+,p_item_template_options=>'#DEFAULT#'
+,p_is_persistent=>'N'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'disabled', 'N',
+  'submit_when_enter_pressed', 'N',
+  'subtype', 'TEXT',
+  'trim_spaces', 'BOTH')).to_clob
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(10487059141504369250)
+,p_process_sequence=>10
+,p_process_point=>'BEFORE_HEADER'
+,p_region_id=>wwv_flow_imp.id(10487050447165369238)
+,p_process_type=>'NATIVE_FORM_INIT'
+,p_process_name=>'Initialize form Editar cuenta pasajero'
+,p_static_id=>'initialize-form-editar-cuenta-pasajero'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'current_row_total_item', '',
+  'next_primary_key_items', '',
+  'previous_primary_key_items', '')).to_clob
+,p_internal_uid=>10487059141504369250
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(10487059791534369251)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(10487050447165369238)
+,p_process_type=>'NATIVE_FORM_DML'
+,p_process_name=>'Process form Editar cuenta pasajero'
+,p_static_id=>'process-form-editar-cuenta-pasajero'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'lock_row', 'Y',
+  'prevent_lost_updates', 'Y',
+  'return_primary_keys_after_insert', 'Y',
+  'target_type', 'REGION_SOURCE')).to_clob
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>10487059791534369251
+,p_created_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044927Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+end;
+/
+prompt --application/pages/page_00034
+begin
+wwv_flow_imp_page.create_page(
+ p_id=>34
+,p_name=>'Cancelar solicitud'
+,p_alias=>'CANCELAR-SOLICITUD1'
+,p_step_title=>'Cancelar solicitud'
+,p_autocomplete_on_off=>'OFF'
+,p_step_template=>4075783602716660119
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_created_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261103045024Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_last_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(10487190956468374161)
+,p_plug_name=>'Breadcrumb'
+,p_static_id=>'breadcrumb'
+,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>2534890969069732905
+,p_plug_display_sequence=>10
+,p_plug_display_point=>'REGION_POSITION_01'
+,p_plug_item_display_point=>'ABOVE'
+,p_menu_id=>wwv_flow_imp.id(10096210831807611924)
+,p_plug_source_type=>'NATIVE_BREADCRUMB'
+,p_menu_template_id=>4075790987805660140
+,p_created_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045017Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(10487223196069374828)
+,p_plug_name=>'Cancelar solicitud'
+,p_static_id=>'cancelar-solicitud'
+,p_region_template_options=>'#DEFAULT#:t-IRR-region--hideHeader js-addHiddenHeadingRoleDesc'
+,p_plug_template=>2103954283454391425
+,p_plug_display_sequence=>20
+,p_plug_item_display_point=>'ABOVE'
+,p_query_type=>'TABLE'
+,p_query_table=>'ESTADOS_DE_SOLICITUD'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_IG'
+,p_prn_units=>'INCHES'
+,p_prn_paper_size=>'LETTER'
+,p_prn_width=>11
+,p_prn_height=>8.5
+,p_prn_orientation=>'HORIZONTAL'
+,p_prn_page_header_font_color=>'#000000'
+,p_prn_page_header_font_family=>'Helvetica'
+,p_prn_page_header_font_weight=>'normal'
+,p_prn_page_header_font_size=>'12'
+,p_prn_page_footer_font_color=>'#000000'
+,p_prn_page_footer_font_family=>'Helvetica'
+,p_prn_page_footer_font_weight=>'normal'
+,p_prn_page_footer_font_size=>'12'
+,p_prn_header_bg_color=>'#EEEEEE'
+,p_prn_header_font_color=>'#000000'
+,p_prn_header_font_family=>'Helvetica'
+,p_prn_header_font_weight=>'bold'
+,p_prn_header_font_size=>'10'
+,p_prn_body_bg_color=>'#FFFFFF'
+,p_prn_body_font_color=>'#000000'
+,p_prn_body_font_family=>'Helvetica'
+,p_prn_body_font_weight=>'normal'
+,p_prn_body_font_size=>'10'
+,p_prn_border_width=>.5
+,p_prn_page_header_alignment=>'CENTER'
+,p_prn_page_footer_alignment=>'CENTER'
+,p_prn_border_color=>'#666666'
+,p_created_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045024Z')
+,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(10487225068865374839)
+,p_name=>'APEX$ROW_ACTION'
+,p_session_state_data_type=>'VARCHAR2'
+,p_item_type=>'NATIVE_ROW_ACTION'
+,p_display_sequence=>20
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(10487224410462374836)
+,p_name=>'APEX$ROW_SELECTOR'
+,p_session_state_data_type=>'VARCHAR2'
+,p_item_type=>'NATIVE_ROW_SELECTOR'
+,p_display_sequence=>10
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'enable_multi_select', 'Y',
+  'hide_control', 'N',
+  'show_select_all', 'Y')).to_clob
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(10487227160954374848)
+,p_name=>'ESTADOS_SOLICITUD_ID_ESTADO_SOLICITUD'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'ESTADOS_SOLICITUD_ID_ESTADO_SOLICITUD'
+,p_data_type=>'NUMBER'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_HIDDEN'
+,p_display_sequence=>40
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+,p_use_as_row_header=>false
+,p_is_primary_key=>true
+,p_include_in_export=>false
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(10487228214492374851)
+,p_name=>'FECHA_ESTADO'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'FECHA_ESTADO'
+,p_data_type=>'TIMESTAMP'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_DATE_PICKER_APEX'
+,p_heading=>'Fecha Estado'
+,p_heading_alignment=>'LEFT'
+,p_display_sequence=>50
+,p_value_alignment=>'LEFT'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'display_as', 'POPUP',
+  'max_date', 'NONE',
+  'min_date', 'NONE',
+  'multiple_months', 'N',
+  'show_time', 'N',
+  'use_defaults', 'Y')).to_clob
+,p_is_required=>true
+,p_enable_filter=>true
+,p_filter_date_ranges=>'ALL'
+,p_filter_lov_type=>'DISTINCT'
+,p_use_as_row_header=>false
+,p_enable_sort_group=>true
+,p_enable_control_break=>true
+,p_enable_hide=>true
+,p_is_primary_key=>false
+,p_duplicate_value=>true
+,p_include_in_export=>true
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_region_column(
+ p_id=>wwv_flow_imp.id(10487226031478374844)
+,p_name=>'SOLICITUDES_ID_SOLICITUD'
+,p_source_type=>'DB_COLUMN'
+,p_source_expression=>'SOLICITUDES_ID_SOLICITUD'
+,p_data_type=>'NUMBER'
+,p_session_state_data_type=>'VARCHAR2'
+,p_is_query_only=>false
+,p_item_type=>'NATIVE_HIDDEN'
+,p_display_sequence=>30
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'value_protected', 'Y')).to_clob
+,p_use_as_row_header=>false
+,p_is_primary_key=>true
+,p_include_in_export=>false
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_interactive_grid(
+ p_id=>wwv_flow_imp.id(10487223245386374830)
+,p_internal_uid=>10487223245386374830
+,p_is_editable=>true
+,p_edit_operations=>'i:u:d'
+,p_lost_update_check_type=>'VALUES'
+,p_add_row_if_empty=>true
+,p_lazy_loading=>false
+,p_requires_filter=>false
+,p_select_first_row=>true
+,p_fixed_row_height=>true
+,p_pagination_type=>'SCROLL'
+,p_show_total_row_count=>true
+,p_show_toolbar=>true
+,p_enable_save_public_report=>false
+,p_enable_subscriptions=>true
+,p_enable_flashback=>true
+,p_define_chart_view=>true
+,p_enable_download=>true
+,p_download_formats=>'CSV:HTML:XLSX:PDF'
+,p_enable_mail_download=>true
+,p_fixed_header=>'PAGE'
+,p_show_icon_view=>false
+,p_show_detail_view=>false
+,p_updated_on=>wwv_flow_imp.dz('20261103045024Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_ig_report(
+ p_id=>wwv_flow_imp.id(10487223997314374835)
+,p_interactive_grid_id=>wwv_flow_imp.id(10487223245386374830)
+,p_static_id=>'primary'
+,p_type=>'PRIMARY'
+,p_default_view=>'GRID'
+,p_show_row_number=>false
+,p_settings_area_expanded=>true
+,p_updated_on=>wwv_flow_imp.dz('20261103045023Z')
+,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
+);
+wwv_flow_imp_page.create_ig_report_view(
+ p_id=>wwv_flow_imp.id(10487224068308374835)
+,p_report_id=>wwv_flow_imp.id(10487223997314374835)
+,p_view_type=>'GRID'
+,p_stretch_columns=>true
+,p_srv_exclude_null_values=>false
+,p_srv_only_display_columns=>true
+,p_edit_mode=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(10487225568289374842)
+,p_view_id=>wwv_flow_imp.id(10487224068308374835)
+,p_display_seq=>0
+,p_column_id=>wwv_flow_imp.id(10487225068865374839)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(10487226628571374846)
+,p_view_id=>wwv_flow_imp.id(10487224068308374835)
+,p_display_seq=>1
+,p_column_id=>wwv_flow_imp.id(10487226031478374844)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(10487227788691374850)
+,p_view_id=>wwv_flow_imp.id(10487224068308374835)
+,p_display_seq=>2
+,p_column_id=>wwv_flow_imp.id(10487227160954374848)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_ig_report_column(
+ p_id=>wwv_flow_imp.id(10487228894138374855)
+,p_view_id=>wwv_flow_imp.id(10487224068308374835)
+,p_display_seq=>3
+,p_column_id=>wwv_flow_imp.id(10487228214492374851)
+,p_is_visible=>true
+,p_is_frozen=>false
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(10487229265635374857)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_region_id=>wwv_flow_imp.id(10487223196069374828)
+,p_process_type=>'NATIVE_IG_DML'
+,p_process_name=>'Cancelar solicitud - Save Interactive Grid Data'
+,p_static_id=>'cancelar-solicitud-save-interactive-grid-data'
+,p_attributes=>wwv_flow_t_plugin_attributes(wwv_flow_t_varchar2(
+  'lock_row', 'Y',
+  'prevent_lost_updates', 'Y',
+  'return_primary_keys_after_insert', 'Y',
+  'target_type', 'REGION_SOURCE')).to_clob
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_internal_uid=>10487229265635374857
+,p_created_on=>wwv_flow_imp.dz('20261103045024Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103045024Z')
 ,p_created_by=>'S.MORAN@UNIANDES.EDU.CO'
 ,p_updated_by=>'S.MORAN@UNIANDES.EDU.CO'
 );
@@ -5021,9 +5714,9 @@ wwv_flow_imp_page.create_page(
 ,p_step_template=>4075783602716660119
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
-,p_page_component_map=>'17'
+,p_page_component_map=>'16'
 ,p_created_on=>wwv_flow_imp.dz('20261103044309Z')
-,p_last_updated_on=>wwv_flow_imp.dz('20261103044632Z')
+,p_last_updated_on=>wwv_flow_imp.dz('20261103044842Z')
 ,p_created_by=>'SARA'
 ,p_last_updated_by=>'SARA'
 );
@@ -5102,6 +5795,47 @@ wwv_flow_imp_page.create_page_item(
   'page_action_on_selection', 'NONE')).to_clob
 ,p_created_on=>wwv_flow_imp.dz('20261103044544Z')
 ,p_updated_on=>wwv_flow_imp.dz('20261103044544Z')
+,p_created_by=>'SARA'
+,p_updated_by=>'SARA'
+);
+wwv_flow_imp_page.create_page_process(
+ p_id=>wwv_flow_imp.id(2243636068514449824)
+,p_process_sequence=>10
+,p_process_point=>'AFTER_SUBMIT'
+,p_process_type=>'NATIVE_PLSQL'
+,p_process_name=>'Cancelar solicitud'
+,p_static_id=>'cancelar-solicitud'
+,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
+'DECLARE',
+'  v_salida TIMESTAMP;',
+'  v_viaje  NUMBER;',
+'  v_acept  NUMBER;',
+'BEGIN',
+'  SELECT v.Fecha_hora_salida, v.ID_viaje INTO v_salida, v_viaje',
+'  FROM Solicitudes s JOIN Viajes v ON v.ID_viaje = s.Paradas_viaje_Viajes_ID_viaje',
+'  WHERE s.ID_solicitud = :P52_SOLICITUD;',
+'',
+'  IF v_salida < SYSTIMESTAMP + INTERVAL ''2'' HOUR THEN',
+'    RAISE_APPLICATION_ERROR(-20008, ''No se puede cancelar con menos de 2 horas de anticipacion'');',
+'  END IF;',
+'',
+'  SELECT COUNT(*) INTO v_acept FROM Estados_de_solicitud',
+'  WHERE Solicitudes_ID_solicitud = :P52_SOLICITUD AND Estados_solicitud_ID_estado_solicitud = 2;',
+'',
+'  INSERT INTO Estados_de_solicitud',
+'    (Solicitudes_ID_solicitud, Estados_solicitud_ID_estado_solicitud, Fecha_estado)',
+'  VALUES (:P52_SOLICITUD, 4, SYSTIMESTAMP);',
+'',
+'  IF v_acept > 0 THEN',
+'    UPDATE Viajes SET Cupos_disponibles = Cupos_disponibles + 1 WHERE ID_viaje = v_viaje;',
+'  END IF;',
+'END;'))
+,p_process_clob_language=>'PLSQL'
+,p_error_display_location=>'INLINE_IN_NOTIFICATION'
+,p_process_when_button_id=>wwv_flow_imp.id(2243635950989449823)
+,p_internal_uid=>2243636068514449824
+,p_created_on=>wwv_flow_imp.dz('20261103044826Z')
+,p_updated_on=>wwv_flow_imp.dz('20261103044842Z')
 ,p_created_by=>'SARA'
 ,p_updated_by=>'SARA'
 );
